@@ -6,8 +6,6 @@ there.
 
 ![SmoothCut in the notch: a red recording dot and a running timer](screenshots/live-activity.jpg)
 
-![Hover the notch to pause or stop the recording](screenshots/sneak-peek.jpg)
-
 ## What it shows
 
 | When | In the notch | Hover (sneak peek) |
