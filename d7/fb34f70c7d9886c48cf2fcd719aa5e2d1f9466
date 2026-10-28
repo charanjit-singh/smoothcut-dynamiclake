@@ -1,0 +1,19 @@
+README.md
+  s_39194694107de4::t_884829f31bf14e 7-10
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "d7fb34f70c7d9886c48cf2fcd719aa5e2d1f9466",
+  "prompts": {},
+  "sessions": {
+    "s_39194694107de4": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "s_39194694107de4",
+        "model": "unknown"
+      },
+      "human_author": "Charanjit Singh <charanjitdotsingh@gmail.com>"
+    }
+  }
+}
