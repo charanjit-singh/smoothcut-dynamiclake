@@ -48,4 +48,5 @@ SmoothCut's own **Add to DynamicLake** button writes the same package to your Do
 
 ## Licence
 
-MIT, see `LICENSE`.
+Copyright (c) 2026 Charanjit Singh. GPL-3.0, see `LICENSE`: you may study, change and share this
+plugin, and anything built from it must be released under the same licence, with this notice kept.
