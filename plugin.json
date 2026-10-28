@@ -1,0 +1,11 @@
+{
+	"schemaVersion": 1,
+	"identifier": "studio.smoothcut.dynamiclake",
+	"name": "SmoothCut",
+	"version": "1.0.0",
+	"developerName": "SmoothCut",
+	"executable": "smoothcut-dynamiclake.sh",
+	"arguments": [],
+	"icon": "icon.png",
+	"autoStart": true
+}
