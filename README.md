@@ -4,6 +4,10 @@ Shows [SmoothCut](https://smoothcut.studio) in the notch: a live activity while 
 (a recording indicator and a running timer, with Pause / Resume and Stop in the sneak peek), and
 progress then a "Show in Finder" shortcut while you export.
 
+![SmoothCut in the notch: a red recording dot and a running timer](screenshots/live-activity.jpg)
+
+![Hover the notch to pause or stop the recording](screenshots/sneak-peek.jpg)
+
 ## Requirements
 
 - macOS with [DynamicLake](https://dynamiclake.com) (Pro or Playground).
