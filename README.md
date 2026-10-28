@@ -19,19 +19,21 @@ When SmoothCut is not running, or the switch is off, the plugin waits quietly an
 
 ## How it works
 
-`smoothcut-dynamiclake.sh` is a relay and nothing else. DynamicLake starts it with
-`DYNAMICLAKE_JSON_SOCKET`; it connects that socket to a local Unix socket SmoothCut listens on
-(only while the setting above is on), sends a one-line hello that carries
-`DYNAMICLAKE_PLUGIN_FEATURES`, and then copies bytes both ways. The framing and the JSON
+`smoothcut-dynamiclake.pl` is a relay and nothing else. DynamicLake starts it with
+`DYNAMICLAKE_JSON_SOCKET`; once SmoothCut's local socket is there (only while the setting above is
+on), it connects to both, sends SmoothCut a one-line hello that carries
+`DYNAMICLAKE_PLUGIN_FEATURES`, and copies bytes both ways. The framing and the JSON
 (`create` / `update` / `dismiss`, `action` callbacks) are SmoothCut's side of the conversation.
 
-It needs only what a stock Mac has: `/bin/sh`, `nc`, `mkfifo`, `mktemp`. No Python, no Node.
+DynamicLake only trusts messages from the process it launched, so the script holds both
+connections itself rather than handing them to a helper. It is Perl because every Mac ships
+`/usr/bin/perl` and it can do that; there is no Python or Node to rely on, and it uses only modules
+that come with macOS.
 
 - The plugin only ever relays; it cannot make SmoothCut do anything except what SmoothCut itself
   answers to: pause, resume, stop, and reveal the file just exported.
-- It never writes inside the installed package. Its one temporary file (a named pipe) is in
-  `$TMPDIR` and is removed on exit.
-- No network access. The socket is in SmoothCut's own data folder, readable by you only.
+- It never writes anywhere: no temporary files, nothing inside the installed package.
+- No network access. SmoothCut's socket is in its own data folder, readable by you only.
 
 ## Package it
 
